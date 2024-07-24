@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    /* display: flex; */
+    /* position: relative;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    font-family: 'poppins',sans-serif;
+    background: linear-gradient(black 75%,#fff 25%);
+    position: relative;
+    overflow-x: hidden;
+}
+.outer{
+    width: 24vw;
+    height: 90vh;
+    position: absolute;
+    top: 10vh;
+    left: 71vw;
+    /* padding-left: 30vw; */
+    overflow: hidden;
+}
+.bgframe{
+   width: 24vw;
+   height: 100%;
+    background-color: rgb(219, 247, 170);
+ 
+}
+.bdyimg{
+    position: absolute;
+    height: 90vh;
+    top: 10vh;
+    left: 41vw;
+
+}
+.bdyimg img{
+    width: 73vw;
+    height: 100%;
+}
+.wrapper{
+    background: black;
+    width: 570px;
+    height: 350px;
+    /* padding: 20px 40px; */
+    border-radius: 4px;
+    position: relative;
+}
+
+
+.bmi_calculator_data{
+    width: 500px;
+    margin-left: 70px;
+    /* padding: 10px 0px; */
+    margin-left: 30px;
+
+}
+.bmi_calculator_data_group{
+    display: block;
+    justify-content: space-evenly;
+   padding-left: 20px;
+   width:42vw;
+   margin: 20px 0;
+    
+}
+.bmi_calculator_data_group input{
+    width: 80%;
+    cursor: pointer;
+
+}
+.bmi_calculator_data_group label,
+.bmi_calculator_data_group span{
+    font-size: 16px;
+    color: white;
+}
+
+#wrt_weight{
+    width: 100px;
+    outline: none;
+    background: rgba(54, 49, 49, 0.374);
+    border: none;
+    padding: 5px 0;
+    margin-left: 340px;
+    color: white;
+    /* text-align: right; */
+}
+#wrt_height{
+    width: 100px;
+    outline: none;
+    background: rgba(61, 56, 56, 0.374);
+    border: none;
+    padding: 5px 0;
+    margin-left: 345px;
+    color: white;
+    /* text-align: right; */
+}
+.bmi_calculator_result{
+   /* color: #fff; */
+    padding: 20px 40px;
+    background-color: #efefef70;
+    border: 2px dashed #00223350;
+    border-radius: 4px;
+    margin: 4px 10px;
+}
+.bmi_calculator_result{
+    text-align: center;
+}
+
+
+/* design */
+.navbar-brand{
+    font-weight: 500;
+    font-size: 22px;
+}
+.navbar-brand span{
+    color: rgba(245, 233, 233, 0.766);
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar-nav{
+    margin-left: 25vw;
+}
+.nav-link{
+    font-weight: 200;
+    font-size: 13px;
+    color: rgba(245, 233, 233, 0.766);
+    margin-right: 3vw;
+}
+.nav-button{
+    color: white;
+}
+.nav-button1{
+    font-size: 14px;
+}
+.nav-button2{
+    background: rgb(229, 206, 157);
+    border-radius: none;
+    padding: 7px 16px;
+    color: black;
+    font-weight: 700;
+    font-size: 13px;
+}
+.body-button{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.body-button button {
+    height: 50px;
+    background-color: rgba(59, 52, 52, 0.326);
+    border: 1px solid transparent;
+    color: white;
+    padding: 9px 18px;
+    font-size: 20px;
+    outline: none; /* Remove the default focus outline */
+    cursor: pointer;
+}
+
+.body-button button:hover {
+    border: 2px solid white;
+}
+
+.body-button button.active{
+    border: 2px solid rgb(209, 217, 135);
+}
+
+.BMIbtndiv{
+    margin-left: 52px;
+}
+
+.BMIbtn{
+    padding: 10px 15px;
+    background-color: rgb(219, 247, 170);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.bmi-result-div{
+   display: flex;
+   
+    position: relative;
+    top: 22vh;
+    padding: 0,30px;
+    left: 3vw;
+
+}
+.bmi-body1 h2{
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 30px;
+
+}
+.bmi-body1 .BMIspan{
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+}
+
+ .bmi-body1 .score_number{
+    /* background-color: #0066ff; */
+    font-family: "Yantramanav", sans-serif;
+   font-weight: 900;
+   font-size: 90px;
+    height: 10vh;
+    position: absolute;
+    padding: 0;
+    top: 15px;
+    
+    
+} 
+.bmi-result-body2{
+    display: flex;
+    margin-left: 30px;
+}
+.bmi-result-body2 .bracket p{
+    font-size: 95px;
+    font-weight: 300;
+    color: rgba(237, 180, 170, 0.414);
+}
+.bmi-result-body2 #bmi-result-body2-content{
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 20px;
+    line-height: 2vw;
+    position: absolute;
+    top: 23px;
+   
+}
+.result-body2-content2{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+#healthyweight{
+    font-family: "Yantramanav", sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 22px;
+}
+#height_error{
+    display: block;
+    color: rgb(127, 90, 238);
+    margin-bottom: 20px;
+}
+#weight_error{
+    color: rgb(127, 90, 238);
+    margin-bottom: 20px;
+    display: block;
+}

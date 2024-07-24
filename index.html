@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- font awsomw -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#"><span>IM</span>FIT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item ">
+            <a class="nav-link active text-light" aria-current="page" href="#">Service</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">About Us</a>
+          </li>
+
+
+        </ul>
+
+
+        <div class="d-flex">
+
+          <button class="nav-button nav-button1 btn btn-outline-none" type="submit">Login</button>
+          <button class="nav-button nav-button2 " type="submit">Get Started</button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <div class="bmi_calculator">
+      <div class="body-button">
+        <button class="ms-3" onclick="setActive('malebtn')" id="malebtn"><i class="fa-solid fa-mars"
+            style="color: #ffffff;"></i>&nbsp;Male</button>
+        <button onclick="setActive('femalebtn')" id="femalebtn"><i class="fa-solid fa-venus"
+            style="color: #ffffff;"></i>&nbsp;Female</button>
+        <button onclick="setActive('otherbtn')" id="otherbtn"><i class="fa-solid fa-transgender"
+            style="color: #ffffff;"></i>&nbsp;Other</button>
+      </div>
+  
+      <div class="bmi_calculator_data">
+        <div class="bmi_calculator_data_group">
+          <div style="display: flex; margin-bottom: 10px;">
+            <label for="" class="mb-2">Weight:</label><input type="text" name="" oninput="wrtweight()" id="wrt_weight"
+              placeholder="kg"><br>
+          </div>
+          <input type="range" name="" id="bmi_weight" min="0" max="300" value="0" oninput="outweight()">
+          <span id="bmi_input_weight"></span>
+          <div id="weight_error"></div>
+        </div>
+        <div class="bmi_calculator_data_group">
+          <div style="display: flex; margin-bottom: 10px;">
+            <label for="" class="mb-2">height:</label><input type="text" name="" oninput="wrtheight()" id="wrt_height"
+              placeholder="cm"><br>
+          </div>
+          <input type="range" name="" id="bmi_height" min="0" max="300" value="0" oninput="outweight()">
+          <span id="bmi_input_height"></span>
+          <div id="height_error"></div>
+        </div>
+      </div>
+      <!-- <div class="bmi_calculator_result">
+                <h3>BMI: <span id="bmi_result"></span></h3>
+                <h3 id="bmi_status"></h3>
+            </div> -->
+      <div class="">
+        <button class="BMIbtn" onclick="calculate()">Calculate BMI</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="bmi-result-div">
+    <div class="bmi-body1">
+      <h2>Your <span class="BMIspan">BMI</span> Score</h2>
+      <span class="score_number" id="result-score"></span>
+
+    </div>
+    <div class="bmi-result-body2">
+      <div class="bracket">
+        <p>{</p>
+      </div>
+      <div class="result-body2-content2">
+        <div>
+          <h2 id="result-status" style="font-weight: 600; font-size: 32px;"></h2>
+          <p id="bmi-result-body2-content">Healthy weight range<br>for Your height:<br><span id="healthyweight"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <section>
+
+    </section> -->
+
+
+  <div class="outer">
+    <div class="bgframe">
+    </div>
+  </div>
+  <div class="bdyimg">
+    <img src="../images/image.png" alt="">
+  </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
