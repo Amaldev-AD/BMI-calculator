@@ -5,21 +5,71 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    --c1: #c1262c;
+    --c2: #Db5c23;
+    --c3: #f69220;
+    --c4: #8ba247;
+    --c5: #23b473;
 }
 body{
     /* display: flex; */
     /* position: relative;
     justify-content: center;
     align-items: center; */
-    height: 100vh;
+    height: 105vh;
     font-family: 'poppins',sans-serif;
     background: linear-gradient(black 75%,#fff 25%);
     position: relative;
     overflow-x: hidden;
+
+    
 }
+.progress {
+    display: flex;
+    width: auto;
+    background-color: #000;
+    position: relative;
+    height: 22vh;
+    padding: 20px;
+    /* background-color: #00; */
+}
+.speedometer {
+    margin-left: 13vw;
+    width: 200px;
+    height: 200px;
+    padding: 50px;
+    border-radius: 50%;
+    background: radial-gradient(#000 0 0) content-box, 
+                conic-gradient(
+                    from -90deg,
+                    var(--c1) 45deg,
+                    var(--c2) 0 90deg,
+                    var(--c3) 0 135deg,
+                    var(--c4) 0 180deg,
+                    
+                    #0000 0
+
+                );
+    position: absolute;
+    
+    
+}
+.needle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.needle img{
+    transform: rotate(-90deg);
+    transition: all 1s ease-in;
+}
+
+
 .outer{
     width: 24vw;
-    height: 90vh;
+    height: 95vh;
     position: absolute;
     top: 10vh;
     left: 71vw;
@@ -34,22 +84,25 @@ body{
 }
 .bdyimg{
     position: absolute;
-    height: 90vh;
+    height: 95vh;
     top: 10vh;
     left: 41vw;
+    overflow-x: hidden;
 
 }
 .bdyimg img{
     width: 73vw;
     height: 100%;
+    overflow-x: hidden;
 }
 .wrapper{
     background: black;
     width: 570px;
     height: 350px;
-    /* padding: 20px 40px; */
+    padding: 20px 40px;
     border-radius: 4px;
     position: relative;
+    z-index: 200;
 }
 
 
@@ -113,6 +166,10 @@ body{
 
 
 /* design */
+
+
+
+
 .navbar-brand{
     font-weight: 500;
     font-size: 22px;
@@ -188,11 +245,17 @@ body{
    display: flex;
    
     position: relative;
-    top: 22vh;
+    top: 5vh;
     padding: 0,30px;
     left: 3vw;
 
+
+
 }
+.bmi-body1{
+    display: none;
+}
+
 .bmi-body1 h2{
     margin: 0;
     font-weight: 400;
@@ -219,11 +282,11 @@ body{
     
 } 
 .bmi-result-body2{
-    display: flex;
+    display: none;
     margin-left: 30px;
 }
 .bmi-result-body2 .bracket p{
-    font-size: 95px;
+    font-size: 99px;
     font-weight: 300;
     color: rgba(237, 180, 170, 0.414);
 }
@@ -240,7 +303,7 @@ body{
     margin-left: 50px;
 }
 .result-body2-content2{
-    margin-left: 5px;
+    margin-left: 39px;
     margin-top: 10px;
 }
 #healthyweight{
@@ -259,3 +322,13 @@ body{
     margin-bottom: 20px;
     display: block;
 }
+
+/* speedometer */
+.speedometer{
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    background: ra
+    
+}
+

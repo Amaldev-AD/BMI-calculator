@@ -59,7 +59,7 @@
         <div class="d-flex">
 
           <button class="nav-button nav-button1 btn btn-outline-none" type="submit">Login</button>
-          <button class="nav-button nav-button2 " type="submit">Get Started</button>
+          <button class="nav-button nav-button2 z-2" type="submit">Get Started</button>
         </div>
 
       </div>
@@ -106,13 +106,25 @@
 
     </div>
   </div>
+
+  <div class="progress">
+   <img src="./images/bodymass-removebg-preview.png" alt="" style="margin-left: 7vw;">
+  <div class="speedometer">
+    <div class="needle">
+      <!-- <div id="progress_"><p></p></div> -->
+      <img id="needleimg" src="./images/needle.png" alt="" width="100px" height="100px">
+    </div>
+  </div>
+  <img src="./images/bodymass2-removebg-preview.png" alt="" style="margin-left: 16vw;">
+</div>
+
   <div class="bmi-result-div">
-    <div class="bmi-body1">
+    <div class="bmi-body1" id="bmi-body1">
       <h2>Your <span class="BMIspan">BMI</span> Score</h2>
       <span class="score_number" id="result-score"></span>
 
     </div>
-    <div class="bmi-result-body2">
+    <div class="bmi-result-body2" id="bmi-result-body2">
       <div class="bracket">
         <p>{</p>
       </div>
@@ -124,7 +136,10 @@
         </div>
       </div>
     </div>
+
   </div>
+
+
   <!-- <section>
 
     </section> -->
